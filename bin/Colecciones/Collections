@@ -1,0 +1,50 @@
+Set: no admite elementos repetidos, no estan ordenados, si los valores no se repiten, es mas eficiente
+ventajas: no permite elementos duplicados, uso sencillo del metodo add, que ademas no permite elementos duplicados.
+Desventajas: no tiene acceso aleaorio, poca eficiencia a la hora de ordenar elementos y no siempre se puede
+Metodos:
+HashSet() / Rapida, no duplicados, no ordenacion, no acceso aleatorio
+LinkedHashSet() / Ordenacion por entrada, eficiente al acceder, no eficiente al agregar.
+TreeSet() / Es ordenado, poco eficiente.
+EnumSet() / La mejor para tipos enumerados.
+CopyOnWriteArraySet() / Especifico concurrencia, eficiente en lectura, poca eficiencia en lectura, poco eficiente para eliminar. 
+ConcurrentSkipListSet() / Especifico concurrencia, admite ordenacion, con muchos elementos no es eficiente.
+================================================================================================================================================
+List: pueden estar repetidos, estan indexados con valores numericos, permite hacer mas cosas que el Set.
+ventajas: acceso aleatorio, estan ordenadas(collection.sort()), a;adir, eliminar sin restriccion, listIterator medifica en cualquier direccion
+sintaxis similar a array.
+Desventajas: bajo rendimiento en operaciones concretas que se resolveria mejor con otras interfaces.
+Metodos: 
+ArrayList (Muy rapido accediendo a elementos, se adapta a una gran numero de escenarios.) 
+Linkedlist (Listas enlazadas, gran eficiencia agregando y eliminando elementos.) 
+Vector(Obsoleta, usada solo en operaciones de concurrencia.) 
+copyOnWriteArrayList (Usada en concurrencia, eficiente en operaciones de lectura, pero poco eficiente en operaciones de escritura.)
+================================================================================================================================================
+
+Map: Colecion de elementos repetibles, indexados por clave unica arbotraria.
+Ventajas: asociacion clave->valor, no claves iguales.
+Desventaja: poca eficiencia comparada con las demas colecciones.
+Metodos:
+HashMap() / No ordenacion, Eficiente.
+LinkedHashMap() / Ordenado por insercion, permite ordenacion por uso, Eficiente lectura, poca eficiencia escritura.
+TreeMap() / Ordenado por clave, poco eficiente en todas sus operaciones.
+EnumMap() / Permite Enum como claves, muy eficiente.
+WeakHashMap() / Utilizado para crear elementos que vaya borrando el sistema si no se utilizan, muy poco eficiente
+HashTable() / Considerado obsoleto, utilizado en operaciones de concurrencia.
+ConcurrentHashMap() / Utilizado en operaciones de concurrencia, no permite nulos.
+=================================================================================================================================================
+
+Queue: no permite el acceso aleatorio, solo al inicio o al final de la cola.
+Ventajas: Muy rapido para acceder al primer y ultimo elemento, permite crear colas de elementos muy eficiente(FIFO / LIFO).
+Desventajas: Acceso lento a los elementos intermedios.
+Metodos:
+ArrayQueue() / Gran eficiencia, la mas utilizada.
+LinkedBlockingDeQue() / Utilizado en programacion concurrente.
+LinkedList() / Rendimiento inferior al de ArrayDeQueue
+PriorityQueue() / Para utilizar un comparator, el primer elemento dependera de la opcion escogida.
+PriorityBlockingQueue() / Igual que el anterior pero mas eficiente en la programacion concurrente.
+
+
+SortedSet:
+SortedMap:  
+
+
